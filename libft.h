@@ -6,7 +6,7 @@
 /*   By: rohidalg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:55:13 by rohidalg          #+#    #+#             */
-/*   Updated: 2023/09/25 17:40:42 by rohidalg         ###   ########.fr       */
+/*   Updated: 2023/09/27 15:58:21 by rohidalg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ extern char		*ft_strnstr(const char *big, const char *little, size_t len);
 extern int		ft_atoi(const char *s);
 extern void		*ft_calloc(size_t nitems, size_t size);
 extern char		*ft_strdup(const char *s);
+extern char 	*ft_substr(char const *s, unsigned int start, size_t len);
+extern char    *ft_strjoin(char const *s1, char const *s2);
 
 #endif
