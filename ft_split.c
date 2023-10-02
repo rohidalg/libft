@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 
 	words = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
 	if (s == 0 || !(words))
-		return (0);
+	return (0);
 	j = 0;
 	while (*s != '\0')
 	{
@@ -78,13 +78,12 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (i > 0)
 		{
-			words[j++] = (char *)ft_strncpy(ft_strnew(i + 1), s, i + 1);
+			words[j++] = ft_strncpy(ft_strnew(i), s, i);
 			s = &s[i];
 		}
 		else
 			s++;
 	}
 	words[j] = 0;
-	free(words);
 	return (words);
 }
