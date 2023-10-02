@@ -44,5 +44,6 @@ extern char		*ft_substr(char const *s, unsigned int start, size_t len);
 extern char		*ft_strjoin(char const *s1, char const *s2);
 extern char		*ft_strtrim(char const *s1, char const *set);
 extern char 	**ft_split(char const *s, char c);
+extern char     *ft_itoa(int n);
 
 #endif
