@@ -6,7 +6,7 @@
 /*   By: rohidalg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:55:13 by rohidalg          #+#    #+#             */
-/*   Updated: 2023/09/27 20:07:06 by rohidalg         ###   ########.fr       */
+/*   Updated: 2023/10/16 19:42:13 by rohidalg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,11 @@ extern char		*ft_strjoin(char const *s1, char const *s2);
 extern char		*ft_strtrim(char const *s1, char const *set);
 extern char 	**ft_split(char const *s, char c);
 extern char     *ft_itoa(int n);
+extern char 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+extern void ft_striteri(char *s, void (*f)(unsigned int, char*));
+extern void ft_putchar_fd(char c, int fd);
+extern void ft_putstr_fd(char *s, int fd);
+extern void ft_putendl_fd(char *s, int fd);
+extern void ft_putnbr_fd(int n, int fd);
 
 #endif

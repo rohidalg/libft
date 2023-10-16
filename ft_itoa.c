@@ -12,49 +12,41 @@
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+int	ft_numlen(int n, int base)
 {
-	int		len;
-	int		i;
-	char	dest;
+	int	count;
 
-	len = 0;
-	i = 0;
-	while (str[len])
-		len++;
-	len -= 1;
-	while (i < len)
-	{
-		dest = str[i];
-		str[i] = str[len];
-		str[len] = dest;
-		i++;
-		len--;
-	}
-	return (str);
+	count = 0;
+	if (n <= 0)
+		++count;
+	while (n && ++count)
+		n /= base;
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	size_t	i;
-	char	*ret;
-	int		sign;
+	int			len;
+	char		*ret;
+	const char	*digits;
 
-	i = 0;
-	if (!(ret = (char *)malloc(sizeof(char) * 12)))
-		return (NULL);
+	digits = "0123456789";
+	len = ft_numlen(n, 10);
+	ret = malloc(sizeof(char) * (len + 1));
+	if (!ret)
+		return (0);
+	ret[len] = 0;
 	if (n == 0)
-		return (ft_strdup("0"));
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	sign = (n < 0) ? 1 : 0;
-	while (n != 0)
+		ret[0] = '0';
+	if (n < 0)
+		ret[0] = '-';
+	while (n)
 	{
-		ret[i++] = (sign) ? (-1 * (n % 10)) + '0' : (n % 10) + '0';
+		if (n > 0)
+			ret[--len] = digits[n % 10];
+		else
+			ret[--len] = digits[n % 10 * -1];
 		n /= 10;
 	}
-	if (sign)
-		ret[i++] = '-';
-	ret[i] = '\0';
-	return (ft_strrev(ret));
+	return (ret);
 }
