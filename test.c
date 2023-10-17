@@ -16,7 +16,7 @@
 
 int	main(void)
 {
-	char	a[] = "contratame";
+	/*char	a[] = "contratame";
 	char	b[] = "movistar";
 	char	c[] = "contratame";
 	char	d[] = "movistar";
@@ -49,5 +49,8 @@ int	main(void)
 	printf("ft_strchr vale %s\n", ft_strchr(a, e));
 	printf("ft_strncmp vale %d\n", ft_strncmp(f, g, 3));
 	printf("strncmp vale %d\n", strncmp(f, g, 3));
+*/
+
+	printf("ft_isalnum vale %i\n", ft_isalnum('0'));
 
 }

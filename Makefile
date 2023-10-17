@@ -39,10 +39,17 @@ SRCs = ft_isalnum.c	\
 	   ft_putchar_fd.c \
 	   ft_putstr_fd.c \
 	   ft_putendl_fd.c \
-	   ft_putnbr_fd.c \
+	   ft_putnbr_fd.c 
+
+BSRCs = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
 	   
 
 OBJs = $(SRCs:.c=.o)
+BOBJs = $(BSRCs:.c=.o)
+
 
 all : $(NAME)
 
@@ -54,8 +61,15 @@ $.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 
+bonus : $(OBJs) $(BOBJs)
+	ar rcs $(NAME) $(OBJs) $(BOBJs)
+
+$.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+
 clean : 
-	$(RM) $(OBJs)
+	$(RM) $(OBJs) $(BOBJs)
 
 
 fclean : clean 
