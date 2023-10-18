@@ -19,6 +19,8 @@ void	*ft_calloc(size_t nitems, size_t size)
 
 	i = 0;
 	tab = (unsigned char *)malloc(size * nitems);
+	if (nitems == SIZE_MAX && size == SIZE_MAX)
+		return (0);
 	if (!tab)
 		return (0);
 	while (i < nitems * size)
