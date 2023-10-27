@@ -37,20 +37,56 @@ int	main(void)
 	printf("\n");
 	printf("ft_strlen vale %d\n", ft_strlen("holiwi"));
 	printf("\n");
-	// printf("ft_bzero vale %s\n", ft_bzero);
-	// printf("bzero vale %c\n", ft_bzero);
+	printf("ft_bzero vale %s\n", ft_bzero);
+	printf("bzero vale %c\n", ft_bzero);
 	printf("\n");
-	// printf("ft_memset vale %s\n", ft_memset);
-	// printf("ft_memcpy vale %s\n", ft_memcpy);
-	// printf("ft_memmove vale %s\n", ft_memmove);
+	printf("ft_memset vale %s\n", ft_memset);
+	printf("ft_memcpy vale %s\n", ft_memcpy);
+	printf("ft_memmove vale %s\n", ft_memmove);
 	printf("ft_strlcat = %zu\n", ft_strlcat(a, b, 6));
 	printf("strlcat = %zu\n", strlcat(c, d, 11));
 	printf("ft_strchr vale %s\n", ft_strchr(a, e));
 	printf("ft_strchr vale %s\n", ft_strchr(a, e));
 	printf("ft_strncmp vale %d\n", ft_strncmp(f, g, 3));
 	printf("strncmp vale %d\n", strncmp(f, g, 3));
-*/
+	*/
+printf("/*---------------------------FT_ATOI---------------------------*/\n");
+	printf("ft_atoi = %i\n", ft_atoi("12"));
+	printf("atoi = %i\n", atoi("12"));
 
-	printf("ft_isalnum vale %i\n", ft_isalnum('0'));
+printf("/*---------------------------FT_SPLIT---------------------------*/\n");
+	char split[] = "hello!";
+	char **words = ft_split("hello!", ' ');
+	int	i = 0;
+
+	while(words[i])
+	{
+		printf("%s\n", words[i]);
+		i++;
+	}
+
+/*printf("/---------------------------FT_BZERO---------------------------/\n");
+	//printf("ft_bzero = %s\n", ft_bzero("holaa", 5));
+	printf("bzero = %s\n", bzero("holaa", 5));*/
+
+printf("/*---------------------------FT_STRLCAT---------------------------*/\n");
+	char strlcat_d[] = "hola";
+	char strlcat_s[] = "caracola";
+
+	printf("ft_strlcat vale %zu\n", ft_strlcat(strlcat_d, strlcat_s, 20));
+
+
+printf("/*---------------------------FT_CALLOC---------------------------*/\n");
+	char n_calloc = 5;
+	char s_calloc = sizeof(int);
+	int *calloc = (int *)ft_calloc(n_calloc, s_calloc);
+
+	printf("ft_calloc vale %zu\n", calloc);
+
+
+printf("/*---------------------------FT_ITOA---------------------------*/\n");
+	int n_itoa = -123;
+	char *itoa = ft_itoa(n_itoa);
+	printf("ft_itoa vale %s\n", itoa);
 
 }
