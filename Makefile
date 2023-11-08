@@ -69,8 +69,6 @@ $.o : %.c
 bonus : $(OBJs) $(BOBJs)
 	ar rcs $(NAME) $(OBJs) $(BOBJs)
 
-$.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
 
 clean : 

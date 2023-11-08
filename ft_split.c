@@ -14,76 +14,75 @@
 
 int	ft_countwords(char const *str, char c)
 {
-	int	count;
-	int	i;
+	int i;
+	int count;
 
 	i = 0;
 	count = 0;
-	while (str[i])
+	while(str[i])
 	{
-		while (str[i] == c)
-			i++;
-		if (str[i] != c && str[i] != '\0')
+		if((str[i] == c && str[i + 1] == c) || str[i + 1] == '\0')
 			count++;
-		while (str[i] != c && str[i] != '\0')
-			i++;
+		i++;
 	}
 	return (count);
 }
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char *ft_words(char const *str, char c, int *i)
 {
-	size_t	i;
-	size_t	s;
+	char *word;
+	int start;
+	int len;
 
-	s = ft_strlen(src);
+	while(str[*i] && str[*i] == c)
+		(*i)++;
+	start = *i;
+	while(str[*i] && str[*i] != c)
+		(*i)++;
+	len = *i - start;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if(!word)
+		return (0);
+	ft_strlcpy(word, str + start, len + 1);
+	return(word);
+}
+
+static char **ft_free(char **string)
+{
+	int i;
+
 	i = 0;
-	while (src[i] != '\0' && i < len)
+	while (string[i])
 	{
-		dst[i] = src[i];
+		free(string[i]);
 		i++;
 	}
-	while (i < len)
-		dst[i++] = '\0';
-	return (dst);
+	free(string);
+	return(0);
 }
 
-char	*ft_strnew(size_t size)
+char	**ft_split(char const *str, char c)
 {
-	char	*str;
+	int countwords;
+	char **string;
+	int i_string;
+	int i;
 
-	str = (char *)malloc(sizeof(char) * size + 1);
-	if (!(str))
+	if(!str)
 		return (0);
-	str[size] = '\0';
-	while (size--)
-		str[size] = '\0';
-	return (str);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	size_t	i;
-	size_t	j;
-	char	**words;
-
-	words = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
-	if (s == 0 || !(words))
+	countwords = ft_countwords(str, c);
+	string = ft_calloc(countwords + 1, sizeof(char *));
+	if(string == 0)
 		return (0);
-	j = 0;
-	while (*s != '\0')
+	i_string = 0;
+	i = 0;
+	while(i_string < countwords)
 	{
-		i = 0;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if (i > 0)
-		{
-			words[j++] = ft_strncpy(ft_strnew(i), s, i);
-			s = &s[i];
-		}
-		else
-			s++;
+		string[i_string] = ft_words(str, c, &i);
+		if(!string[i_string])
+			return (ft_free(string));
+		i_string++;
 	}
-	words[j] = 0;
-	return (words);
+	string[i_string] = 0;
+	return (string);
 }
