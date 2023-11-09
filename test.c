@@ -76,17 +76,33 @@ printf("/*---------------------------FT_STRLCAT---------------------------*/\n")
 	printf("ft_strlcat vale %zu\n", ft_strlcat(strlcat_d, strlcat_s, 20));
 
 
-printf("/*---------------------------FT_CALLOC---------------------------*/\n");
-	char n_calloc = 5;
-	char s_calloc = sizeof(int);
-	int *calloc = (int *)ft_calloc(n_calloc, s_calloc);
+// printf("/*---------------------------FT_CALLOC---------------------------*/\n");
+// 	char n_calloc = 5;
+// 	char s_calloc = sizeof(int);
+// 	int *calloc = (int *)ft_calloc(n_calloc, s_calloc);
 
-	printf("ft_calloc vale %zu\n", calloc);
+// 	printf("ft_calloc vale %zu\n", calloc);
 
 
 printf("/*---------------------------FT_ITOA---------------------------*/\n");
 	int n_itoa = -123;
 	char *itoa = ft_itoa(n_itoa);
 	printf("ft_itoa vale %s\n", itoa);
+
+
+printf("/*---------------------------FT_MEMCPY---------------------------*/\n");
+	const char *src_memcpy = "holaaaa";
+	char dest_memcpy[8];
+	ft_memcpy(dest_memcpy, src_memcpy, 3);
+	printf("ft_memcpy vale %s\n", dest_memcpy);
+	printf("memcpy vale %s\n", memcpy(dest_memcpy, src_memcpy, 3));
+
+
+printf("/*---------------------------FT_MEMMOVE---------------------------*/\n");
+	const char *src_memmove = "adiosss";
+	char dst_memmove [8];
+	ft_memmove(dst_memmove, src_memmove, 3);
+	printf("ft_memmove vale %s\n", dst_memmove);
+	printf("memmove vale %s\n", memmove(dst_memmove, src_memmove, 3));
 
 }
