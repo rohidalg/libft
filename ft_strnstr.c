@@ -31,3 +31,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
+
+/*busca la subcadena little dentro de big, 
+considerando como máximo len caracteres en la cadena big.
+Si la subcadena se encuentra dentro de los primeros len caracteres de big,
+devuelve un puntero al inicio de la primera aparición de la subcadena.
+Si no se encuentra, devuelve un puntero nulo.*/

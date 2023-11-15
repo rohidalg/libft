@@ -27,3 +27,6 @@ void	*ft_calloc(size_t nitems, size_t size)
 		tab[i++] = '\0';
 	return (tab);
 }
+
+/*se usa para asignar nueva memoria, inicializarla en cero 
+y luego devolver un puntero al inicio de esa memoria asignada*/

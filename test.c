@@ -16,40 +16,6 @@
 
 int	main(void)
 {
-	/*char	a[] = "contratame";
-	char	b[] = "movistar";
-	char	c[] = "contratame";
-	char	d[] = "movistar";
-	char	e = 'o';
-	char	f[] = "hala";
-	char	g[] = "hola";
-
-	printf("ft_isalnum vale %i\n", ft_isalnum('0'));
-	printf("isalnum vale %i\n", isalnum('0'));
-	printf("ft_isalpha vale %i\n", ft_isalpha('a'));
-	printf("isalpha vale %i\n", isalpha('a'));
-	printf("ft_isascii vale %i\n", ft_isascii('b'));
-	printf("isascii vale %i\n", isascii('b'));
-	printf("ft_isdigit vale %i\n", ft_isdigit('3'));
-	printf("isdigit vale %i\n", isdigit('3'));
-	printf("ft_isprint vale %i\n", ft_isprint('c'));
-	printf("isprint vale %i\n", isprint('c'));
-	printf("\n");
-	printf("ft_strlen vale %d\n", ft_strlen("holiwi"));
-	printf("\n");
-	printf("ft_bzero vale %s\n", ft_bzero);
-	printf("bzero vale %c\n", ft_bzero);
-	printf("\n");
-	printf("ft_memset vale %s\n", ft_memset);
-	printf("ft_memcpy vale %s\n", ft_memcpy);
-	printf("ft_memmove vale %s\n", ft_memmove);
-	printf("ft_strlcat = %zu\n", ft_strlcat(a, b, 6));
-	printf("strlcat = %zu\n", strlcat(c, d, 11));
-	printf("ft_strchr vale %s\n", ft_strchr(a, e));
-	printf("ft_strchr vale %s\n", ft_strchr(a, e));
-	printf("ft_strncmp vale %d\n", ft_strncmp(f, g, 3));
-	printf("strncmp vale %d\n", strncmp(f, g, 3));
-	*/
 printf("/*---------------------------FT_ATOI---------------------------*/\n");
 	printf("ft_atoi = %i\n", ft_atoi("12"));
 	printf("atoi = %i\n", atoi("12"));
@@ -104,5 +70,55 @@ printf("/*---------------------------FT_MEMMOVE---------------------------*/\n")
 	ft_memmove(dst_memmove, src_memmove, 3);
 	printf("ft_memmove vale %s\n", dst_memmove);
 	printf("memmove vale %s\n", memmove(dst_memmove, src_memmove, 3));
+
+
+printf("/*---------------------------FT_MEMSET---------------------------*/\n");
+	char s_memset[] = "holaaaaaaaa";
+	int c_memset = 'k';
+	char *r_memset = ft_memset(s_memset, c_memset, 5);
+	printf("ft_memset vale =%s\n", r_memset);
+	printf("memset vale =%s\n", memset(s_memset, c_memset, 5));
+
+
+printf("/*---------------------------FT_STRTRIM---------------------------*/\n");
+	char const s1_strtrim[] = "           hola caracola";
+	char const set_strtrim = ' ';
+	char *r_strtrim = ft_strtrim(s1_strtrim, &set_strtrim);
+	printf("ft_strtrim vale =%s\n", r_strtrim);
+	
+
+
+printf("/*---------------------------FT_STRNCMP---------------------------*/\n");
+	char str1_strncmp[] = "hola Rodrigo";
+	char str2_strncmp[] = "hola rodrigo";
+	int r_strncmp = ft_strncmp(str1_strncmp, str2_strncmp, 15);
+	printf("ft_strncmp vale =%i\n", r_strncmp);
+
+
+printf("/*---------------------------FT_SUBSTR---------------------------*/\n");
+	char s_substr[] = "hoy hace un dia esplendido";
+	int start_substr = 4;
+	char *r_substr = ft_substr(s_substr, start_substr, 27);
+	printf("ft_substr vale =%s\n", r_substr);
+
+
+printf("/*---------------------------FT_LSTADD_BACK---------------------------*/\n");
+	t_list *lst = 0;
+	t_list *n1 = ft_lstnew("nodo1");
+	t_list *n2 = ft_lstnew("nodo2");
+	t_list *n3 = ft_lstnew("nodo3");
+
+	ft_lstadd_back(&lst, n1);
+	ft_lstadd_back(&lst, n2);
+	ft_lstadd_back(&lst, n3);
+
+	printf("contenido de la lista:\n");
+
+	t_list *current = lst;
+	while(current != 0)
+	{
+		printf("%s\n", (char *)current -> content);
+		current = current -> next;
+	}
 
 }

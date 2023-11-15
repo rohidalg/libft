@@ -25,3 +25,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
+
+/*busca el carácter en la cadena desde el final hacia el principio
+hasta que encuentra el carácter deseado o llega al inicio de la cadena */

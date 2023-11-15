@@ -30,3 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(dest, s + start, len + 1);
 	return (dest);
 }
+
+/*La subcadena comienza en el índice start de la string s
+y tiene una longitud máxima de len caracteres*/

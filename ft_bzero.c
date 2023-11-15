@@ -25,3 +25,6 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/*se utiliza para establecer en cero un bloque de memoria ya existente,
+ no realiza la asignación de memoria*/

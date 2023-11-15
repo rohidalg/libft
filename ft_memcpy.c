@@ -30,3 +30,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	}
 	return (dest);
 }
+
+/* copia un bloque de memoria de un lugar a otro*/

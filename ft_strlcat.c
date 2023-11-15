@@ -30,3 +30,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
+
+/*se usa para concatenar una cadena de manera segura a otra cadena ya existente.*/

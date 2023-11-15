@@ -33,3 +33,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(dest, &s1[i], len + 1);
 	return (dest);
 }
+
+/*elimina los caracteres especificados en set al principio y al final de la cadena s1
+y devuelve una nueva cadena que resulta después de este recorte*/

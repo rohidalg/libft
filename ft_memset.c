@@ -26,3 +26,5 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*llena un área de memoria con un valor específico en n bytes*/

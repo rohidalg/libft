@@ -25,3 +25,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+
+/*La función f se aplica a cada carácter en la cadena s a través de un bucle while,
+permitiendo que la función f realice cambios en la cadena original directamente. 
+Esta función no crea una nueva cadena*/

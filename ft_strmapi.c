@@ -31,3 +31,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = 0;
 	return (str);
 }
+
+/*iteraría a través de cada carácter en la cadena s, 
+aplicando la función f a cada carácter con su índice correspondiente.
+Luego, construiría una nueva cadena a partir de los resultados de esta aplicación de la función f*/

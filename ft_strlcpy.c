@@ -29,3 +29,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	dst[i] = '\0';
 	return (src2);
 }
+
+/*se utiliza para copiar una cadena de manera segura en otra*/
