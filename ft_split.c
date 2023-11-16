@@ -27,6 +27,8 @@ int	ft_countwords(char const *str, char c)
 	}
 	return (count);
 }
+/*cuenta palabras utilizando el delimitador c,
+y count se imcrementa cada vez que encuentra el primer caracter de la palabra*/
 
 char	*ft_words(char const *str, char c, int *i)
 {
@@ -46,6 +48,7 @@ char	*ft_words(char const *str, char c, int *i)
 	ft_strlcpy(word, str + start, len + 1);
 	return (word);
 }
+/*i rastrea la posicion de la palabra y len coge el tamaño para el espacio de memoria*/
 
 static char	**ft_free(char **string)
 {
@@ -60,6 +63,7 @@ static char	**ft_free(char **string)
 	free(string);
 	return (0);
 }
+/*libera memoria asiganada en bucle para las string y luego para la matriz*/
 
 char	**ft_split(char const *str, char c)
 {
@@ -86,3 +90,6 @@ char	**ft_split(char const *str, char c)
 	string[i_string] = 0;
 	return (string);
 }
+
+/*asigno memoria con calloc y sabiendo las palabras que hay, hago el tamaño,
+luego con ft_words las agrega a la matriz, y en caso de error uso el free*/

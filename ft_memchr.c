@@ -27,3 +27,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (0);
 }
+
+/*busca la primera aparición del carácter c
+en los primeros n bytes de la memoria apuntada por str*/

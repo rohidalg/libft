@@ -31,3 +31,7 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
+
+/*compara los primeros num bytes de dos bloques de memoria,
+Si encuentra una diferencia en los bytes, devuelve la diferencia
+entre los primeros bytes diferentes.*/

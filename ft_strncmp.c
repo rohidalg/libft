@@ -25,3 +25,5 @@ int	ft_strncmp(const char *str1, const char *str2, size_t num)
 		return (0);
 	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 }
+
+/*te compara dos strings y te devuelve la resta de los caracteres asci*/

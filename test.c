@@ -121,4 +121,10 @@ printf("/*---------------------------FT_LSTADD_BACK---------------------------*/
 		current = current -> next;
 	}
 
+
+printf("/*---------------------------FT_STRNSTR---------------------------*/\n");
+	char big_strnstr[] = "buenos dias rodrigo";
+	char little_strnstr[] = "rodrigo";
+	char *r_strnstr = ft_strnstr(big_strnstr, little_strnstr, 20);
+	printf("ft_strnstr vale =%s\n", r_strnstr);
 }

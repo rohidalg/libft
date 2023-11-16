@@ -23,4 +23,4 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *)s);
 }
 
-/*e utiliza para buscar la primera aparición de un carácter específico*/
+/*se utiliza para buscar la primera aparición de un carácter específico*/

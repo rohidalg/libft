@@ -29,3 +29,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(dest, s2, i + j + 1);
 	return (dest);
 }
+
+/*concatena 2 strings y la asigna en la nueva cadena resultante*/
