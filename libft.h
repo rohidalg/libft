@@ -28,7 +28,7 @@ extern int			ft_isalpha(int c);
 extern int			ft_isascii(int c);
 extern int			ft_isdigit(int c);
 extern int			ft_isprint(int c);
-extern int			ft_strlen(char const *s);
+extern size_t			ft_strlen(char const *s);
 extern void			*ft_memset(void *s, int c, size_t n);
 extern void			ft_bzero(void *s, size_t n);
 extern void			*ft_memcpy(void *dest, const void *src, size_t len);
